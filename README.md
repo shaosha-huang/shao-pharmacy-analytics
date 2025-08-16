@@ -47,7 +47,7 @@ Here’s a description of each table:
 
 ### Entity Relationship Diagram
 
-![Entity Relationship Diagram](pharmacy-erd.png)
+![Entity Relationship Diagram](ERD.png)
 
 ---
 
