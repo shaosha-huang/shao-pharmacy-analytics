@@ -47,59 +47,7 @@ Here’s a description of each table:
 
 ### Entity Relationship Diagram
 
-Below is the ERD in Mermaid format.  
-**Tip:** GitHub now natively renders Mermaid diagrams in Markdown preview. If you view locally, VS Code with a Mermaid extension will also work.
-
-```mermaid
-erDiagram
-    CUSTOMERS ||--o{ ORDERS : places
-    PRODUCTS ||--o{ ORDERS : includes
-
-    CUSTOMERS {
-        string customer_id PK
-        string name
-        string email
-        int age
-        string gender
-        string state
-        date registration_date
-        string subscription_type
-    }
-    PRODUCTS {
-        string product_id PK
-        string product_name
-        string product_category
-        float price_usd
-        boolean prescription_required
-        string manufacturer
-        int stock_quantity
-        string description
-    }
-    ORDERS {
-        int order_id PK
-        string customer_id FK
-        string order_date
-        string product_id FK
-        int quantity
-        string discount_code
-        int shipping_delay_days
-        float customer_rating
-        datetime shipping_date
-        datetime delivered_date
-        boolean refill
-        string prescribing_doctor
-        string order_status
-        string payment_method
-        float order_total
-        %% Note: Duplicates can exist for order_id, but are unique values
-    }
-```
-
-**Note:**  
-If column names are showing up cut off in your repo, it's likely because of line length or the Mermaid renderer.  
-- Try placing each column on its own line, as above.
-- Ensure there are no trailing spaces or tabs.
-- If you still see truncation, consider using a PNG image export of the ERD for a flawless display.
+![Entity Relationship Diagram](pharmacy-erd.png)
 
 ---
 
