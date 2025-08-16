@@ -47,11 +47,8 @@ Here’s a description of each table:
 
 ### Entity Relationship Diagram
 
-#### Text-based ERD (Using Mermaid)
-If viewing on GitHub, ensure you have a Mermaid renderer enabled (the diagram may not show natively in README preview, but is compatible with tools like VS Code's Markdown Preview Mermaid Support or GitHub's future updates).
-
-<details>
-  <summary>Click to view ERD code</summary>
+Below is the ERD in Mermaid format.  
+**Tip:** GitHub now natively renders Mermaid diagrams in Markdown preview. If you view locally, VS Code with a Mermaid extension will also work.
 
 ```mermaid
 erDiagram
@@ -97,12 +94,12 @@ erDiagram
         %% Note: Duplicates can exist for order_id, but are unique values
     }
 ```
-</details>
 
-#### ERD Diagram Image
-If you want a visible diagram in all markdown renderers, use an image (replace with your own if generated):
-
-![pharmacy-erd](pharmacy_erd.png)
+**Note:**  
+If column names are showing up cut off in your repo, it's likely because of line length or the Mermaid renderer.  
+- Try placing each column on its own line, as above.
+- Ensure there are no trailing spaces or tabs.
+- If you still see truncation, consider using a PNG image export of the ERD for a flawless display.
 
 ---
 
