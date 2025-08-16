@@ -1,53 +1,98 @@
-# 📊 Sample Data Analytics Project README
+# 📊 Shao's Pharmacy: Data Analytics Project
 
-Welcome to the sample GitHub README!  
-Use this template as an outline for your data analytics projects. Include one README per repository, with each repository storing one project.
+Welcome to the portfolio repository for **Shao's Pharmacy**, a sample business analytics project.  
+This project demonstrates the entire analytics workflow: synthetic data creation, SQL cleaning & analysis, and Tableau dashboarding.
 
 > **Quality over quantity:**  
-> Having 2 stellar business-relevant projects stands out much more than 3+ mediocre projects.
+> Two stellar, business-relevant projects stand out much more than several mediocre ones.
 
-Feel free to make a copy of this or fork this repository and make it your own.  
+Fork this repo, adapt it, and make it your own.  
 **Happy portfolio-ing! 🚀**
 
 ---
 
 ## 🏢 Project Background
 
-_Background about the company, including:_
-- **Industry**
-- **Active years**
-- **Business model**
-- **Key business metrics**
+**Industry:** Telemedicine / Online Pharmacy  
+**Active Years:** 2019–2024 (5 years of data)  
+**Business Model:** Direct-to-consumer online prescription and over-the-counter medication sales, with monthly/yearly subscription options for recurring orders.  
+**Key Metrics:** Order volume, customer retention, product category sales, prescription fulfillment rates, shipping times, customer satisfaction.
 
-Explain this from the POV of a data analyst who is working at the company.
+As a data analyst at Shao's Pharmacy, your goal is to generate actionable insights from sales, customer, and product data to improve growth, retention, and operational efficiency.
 
 ---
 
 ## 🔎 Key Areas of Insights & Recommendations
 
 Insights and recommendations are provided on the following key areas:
-- **Category 1**
-- **Category 2**
-- **Category 3**
-- **Category 4**
+- **Customer Segmentation:** Who are our top segments? How do subscription types affect ordering patterns?
+- **Product Performance:** Which products/categories drive revenue? What are seasonal trends?
+- **Order Fulfillment & Operations:** Shipping delays, prescription completion rates, and refill behavior.
+- **Customer Satisfaction:** Ratings, feedback, and their relationship to repeat business.
 
-- The SQL queries used to inspect and clean the data for this analysis can be found [here](link).
-- Targeted SQL queries regarding various business questions can be found [here](link).
-- An interactive Tableau dashboard used to report and explore sales trends can be found [here](link).
+- The SQL queries used for initial cleaning and inspection are [here](link).
+- Targeted SQL queries for business questions are [here](link).
+- The interactive Tableau dashboard is [here](link).
 
 ---
 
 ## 🗄️ Data Structure & Initial Checks
 
-The company's main database structure as seen below consists of four tables: `table1`, `table2`, `table3`, `table4`, with a total row count of **X** records.  
-A description of each table is as follows:
+Shao's Pharmacy's database consists of **three main tables** with a total of **X** records.  
+Here’s a description of each table:
 
-- **Table 2:**  
-- **Table 3:**  
-- **Table 4:**  
-- **Table 5:**  
+- **customers:** Demographic and subscription info for each customer.
+- **products:** Product catalog, pricing, and prescription status.
+- **orders:** Transactional table linking customers and products, with order details and fulfillment info.
 
-[Entity Relationship Diagram here]
+### Entity Relationship Diagram
+
+![ERD](pharmacy_erd.png)
+
+Or, see below for a text diagram:
+
+```mermaid
+erDiagram
+    CUSTOMERS ||--o{ ORDERS : places
+    PRODUCTS ||--o{ ORDERS : includes
+
+    CUSTOMERS {
+        string customer_id PK
+        string name
+        string email
+        int age
+        string gender
+        string state
+        date registration_date
+        string subscription_type
+    }
+    PRODUCTS {
+        string product_id PK
+        string product_name
+        string product_category
+        float price_usd
+        boolean prescription_required
+        string manufacturer
+        int stock_quantity
+        string description
+    }
+    ORDERS {
+        int order_id PK
+        string customer_id FK
+        string product_id FK
+        date order_date
+        int quantity
+        string discount_code
+        int shipping_delay_days
+        float customer_rating
+        date delivery_date
+        boolean refill
+        string prescribing_doctor
+        string order_status
+        string payment_method
+        float order_total
+    }
+```
 
 ---
 
@@ -55,77 +100,5 @@ A description of each table is as follows:
 
 ### **Overview of Findings**
 
-_Explain the overarching findings, trends, and themes in 2-3 sentences here.  
-This section should address the question:_
-
-> _"If a stakeholder were to take away 3 main insights from your project, what are the most important things they should know?"_
-
-You can put yourself in the shoes of a specific stakeholder (e.g., marketing manager, finance director) to think creatively about this section.
-
-[Visualization, including a graph of overall trends or snapshot of a dashboard]
-
----
-
-## 🔬 Insights Deep Dive
-
-### **Category 1**
-- **Main insight 1:** More detail about supporting analysis, including time frames, quantitative values, and observations about trends.
-- **Main insight 2:** More detail about supporting analysis.
-- **Main insight 3:** More detail about supporting analysis.
-- **Main insight 4:** More detail about supporting analysis.
-
-[Visualization specific to category 1]
-
----
-
-### **Category 2**
-- **Main insight 1:** More detail about supporting analysis.
-- **Main insight 2:** More detail about supporting analysis.
-- **Main insight 3:** More detail about supporting analysis.
-- **Main insight 4:** More detail about supporting analysis.
-
-[Visualization specific to category 2]
-
----
-
-### **Category 3**
-- **Main insight 1:** More detail about supporting analysis.
-- **Main insight 2:** More detail about supporting analysis.
-- **Main insight 3:** More detail about supporting analysis.
-- **Main insight 4:** More detail about supporting analysis.
-
-[Visualization specific to category 3]
-
----
-
-### **Category 4**
-- **Main insight 1:** More detail about supporting analysis.
-- **Main insight 2:** More detail about supporting analysis.
-- **Main insight 3:** More detail about supporting analysis.
-- **Main insight 4:** More detail about supporting analysis.
-
-[Visualization specific to category 4]
-
----
-
-## 💡 Recommendations
-
-_Based on the insights and findings above, we recommend the **[stakeholder team]** to consider the following:_
-
-- **Observation & Recommendation 1:** Specific observation related to a recommended action. Recommendation or general guidance.
-- **Observation & Recommendation 2:** Specific observation and recommendation.
-- **Observation & Recommendation 3:** Specific observation and recommendation.
-- **Observation & Recommendation 4:** Specific observation and recommendation.
-- **Observation & Recommendation 5:** Specific observation and recommendation.
-
----
-
-## ⚠️ Assumptions and Caveats
-
-_Throughout the analysis, multiple assumptions were made to manage challenges with the data. These are noted below:_
-
-- **Assumption 1:** (e.g., missing country records were for customers based in the US, and were re-coded to be US citizens)
-- **Assumption 2:** (e.g., data for December 2021 was missing - this was imputed using a combination of historical trends and December 2020 data)
-- **Assumption 3:** (e.g., because 3% of the refund date column contained non-sensical dates, these were excluded from the analysis)
-
----
+Over five years, Shao's Pharmacy grew steadily, with monthly subscriptions increasing customer retention.  
+Hair and mental health
