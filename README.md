@@ -47,9 +47,7 @@ Here’s a description of each table:
 
 ### Entity Relationship Diagram
 
-![ERD](pharmacy_erd.png)
-
-Or, see below for a text diagram:
+See below for a text diagram:
 
 ```mermaid
 erDiagram
@@ -79,18 +77,20 @@ erDiagram
     ORDERS {
         int order_id PK
         string customer_id FK
+        string order_date
         string product_id FK
-        date order_date
         int quantity
         string discount_code
         int shipping_delay_days
         float customer_rating
-        date delivery_date
+        datetime shipping_date
+        datetime delivered_date
         boolean refill
         string prescribing_doctor
         string order_status
         string payment_method
         float order_total
+        # Note: Duplicates can exist for order_id, but are unique values
     }
 ```
 

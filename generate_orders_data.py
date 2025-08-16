@@ -1,12 +1,12 @@
 import pandas as pd
 import random
 from faker import Faker
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 
 fake = Faker()
 # Load customers and products
-df_customers = pd.read_csv("generate_customers_data.csv")
-df_products = pd.read_csv("generate_products_data.csv")
+df_customers = pd.read_csv("customers.csv")
+df_products = pd.read_csv("products.csv")
 
 start_date = date.today() - timedelta(days=5*365)
 end_date = date.today()
@@ -14,6 +14,8 @@ order_rows = []
 order_id = 10000
 
 doctor_suffixes = ["", " (D.O)", " (D.O.)", " (M.D)", " (MD)", " (DO)", " md", " do", " m.d.", " d.o.", " (PhD)"]
+
+duplicate_pct = 0.03  # 3% of orders will be duplicates
 
 for n in range((end_date - start_date).days + 1):
     day = start_date + timedelta(days=n)
@@ -33,7 +35,16 @@ for n in range((end_date - start_date).days + 1):
         order_status = random.choice(["Shipped", "Delivered", "Processing", "Cancelled"])
         payment_method = random.choice(["Credit Card", "Paypal", "Apple Pay", "Google Pay"])
         order_total = qty * product["price_usd"]
-        order_rows.append([
+
+        # Generate shipping and delivered datetime
+        ship_hour = random.randint(8, 18)
+        ship_minute = random.randint(0, 59)
+        shipping_datetime = datetime(day.year, day.month, day.day, ship_hour, ship_minute, 0)
+        deliver_hour = random.randint(9, 20)
+        deliver_minute = random.randint(0, 59)
+        delivered_datetime = datetime(delivery.year, delivery.month, delivery.day, deliver_hour, deliver_minute, 0)
+
+        order = [
             order_id,
             customer["customer_id"],
             day.strftime("%Y-%m-%d"),
@@ -42,17 +53,28 @@ for n in range((end_date - start_date).days + 1):
             discount_code,
             shipping_delay,
             rating,
-            delivery.strftime("%Y-%m-%d"),
+            shipping_datetime.strftime("%Y-%m-%d %H:%M:%S"),
+            delivered_datetime.strftime("%Y-%m-%d %H:%M:%S"),
             refill,
             prescribing_doctor,
             order_status,
             payment_method,
             order_total
-        ])
+        ]
+        order_rows.append(order)
+
+        # Randomly add a duplicate
+        if random.random() < duplicate_pct:
+            # Duplicate the order with a new order_id
+            order_id += 1
+            duplicate_order = list(order)
+            duplicate_order[0] = order_id
+            order_rows.append(duplicate_order)
+
         order_id += 1
 
 df_orders = pd.DataFrame(order_rows, columns=[
     "order_id","customer_id","order_date","product_id","quantity","discount_code","shipping_delay_days",
-    "customer_rating","delivery_date","refill","prescribing_doctor","order_status","payment_method","order_total"
+    "customer_rating","shipping_date","delivered_date","refill","prescribing_doctor","order_status","payment_method","order_total"
 ])
 df_orders.to_csv("orders.csv", index=False)
