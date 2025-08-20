@@ -47,7 +47,7 @@ Here’s a description of each table:
 
 ### Entity Relationship Diagram
 
-![Entity Relationship Diagram](ERD.png)
+![Entity Relationship Diagram](Entity Relationship Diagram.png)
 
 ---
 

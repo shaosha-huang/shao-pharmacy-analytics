@@ -17,13 +17,18 @@ doctor_suffixes = ["", " (D.O)", " (D.O.)", " (M.D)", " (MD)", " (DO)", " md", "
 
 duplicate_pct = 0.03  # 3% of orders will be duplicates
 
+# Expanded order status options
+order_statuses = [
+    "Scheduled", "Processing", "Shipped", "Delivered", "Cancelled", "On Hold", "Returned", "Awaiting Payment", 
+    "Awaiting Shipment", "Completed", "Failed", "Partially Delivered", "Rescheduled"
+]
+
 for n in range((end_date - start_date).days + 1):
     day = start_date + timedelta(days=n)
     for i in range(random.randint(1,4)):
         customer = df_customers.sample(1).iloc[0]
         product = df_products.sample(1).iloc[0]
         qty = random.randint(1,3)
-        discount_code = random.choice(["SUMMER25", "DISCOUNT10", "FALL20", "SPRING5", "", "summer25"])
         shipping_delay = random.choice([random.randint(0,15), random.randint(16,40)])
         rating = round(random.uniform(1,5),1)
         delivery = day + timedelta(days=shipping_delay)
@@ -32,9 +37,11 @@ for n in range((end_date - start_date).days + 1):
             fake.name() + random.choice(doctor_suffixes)
             if product["prescription_required"] else "N/A"
         )
-        order_status = random.choice(["Shipped", "Delivered", "Processing", "Cancelled"])
+        order_status = random.choice(order_statuses)
         payment_method = random.choice(["Credit Card", "Paypal", "Apple Pay", "Google Pay"])
-        order_total = qty * product["price_usd"]
+        price_usd = product["price_usd"]
+        tax_rate = random.uniform(0.04, 0.11)  # random tax between 4% and 11%
+        order_total = round(qty * price_usd * (1 + tax_rate), 2)
 
         # Generate shipping and delivered datetime
         ship_hour = random.randint(8, 18)
@@ -50,7 +57,6 @@ for n in range((end_date - start_date).days + 1):
             day.strftime("%Y-%m-%d"),
             product["product_id"],
             qty,
-            discount_code,
             shipping_delay,
             rating,
             shipping_datetime.strftime("%Y-%m-%d %H:%M:%S"),
@@ -74,7 +80,7 @@ for n in range((end_date - start_date).days + 1):
         order_id += 1
 
 df_orders = pd.DataFrame(order_rows, columns=[
-    "order_id","customer_id","order_date","product_id","quantity","discount_code","shipping_delay_days",
+    "order_id","customer_id","order_date","product_id","quantity","shipping_delay_days",
     "customer_rating","shipping_date","delivered_date","refill","prescribing_doctor","order_status","payment_method","order_total"
 ])
 df_orders.to_csv("orders.csv", index=False)
