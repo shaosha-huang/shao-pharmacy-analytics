@@ -9,11 +9,20 @@ This project demonstrates the entire analytics workflow: synthetic data creation
 Fork this repo, adapt it, and make it your own.  
 **Happy portfolio-ing! 🚀**
 
+---
 
 ## Project Overview
 
-Hi! I created this project to showcase my ability to work across the data pipeline: generating realistic sample data with Python, using SQL to extract and transform information, and building a dashboard to deliver actionable business insights. It's a hands-on demonstration of my skills in Python, SQL, and turning data into value for decision-making.
+Hi! I created this project to showcase my ability to work across the data pipeline: generating realistic sample data with Python, using SQL to extract and transform information, and building dashboards that deliver actionable business insights.  
+For this project, I focused on three dashboard perspectives that are especially valuable for a real-world team:
 
+- **Customer Segmentation Dashboard:** Understand who your best customers are, their behaviors, and how segmentation impacts retention and growth.
+- **Product Performance Dashboard:** Track top-selling products, seasonal trends, and the impact of promotions or prescription requirements.
+- **Operations & Satisfaction Dashboard:** Monitor shipping delays, fulfillment bottlenecks, and customer feedback—enabling data-driven improvements in service.
+
+Together, these dashboards demonstrate how technical skills can translate directly into business impact, supporting teams across marketing, product, and operations.
+
+---
 
 ## 🏢 Project Background
 
@@ -22,12 +31,13 @@ Hi! I created this project to showcase my ability to work across the data pipeli
 **Business Model:** Direct-to-consumer online prescription and over-the-counter medication sales, with monthly/yearly subscription options for recurring orders.  
 **Key Metrics:** Order volume, customer retention, product category sales, prescription fulfillment rates, shipping times, customer satisfaction.
 
-As a data analyst at Shao's Pharmacy, your goal is to generate actionable insights from sales, customer, and product data to improve growth, retention, and operational efficiency.
+As a data analyst at Shao's Pharmacy, my goal is to generate actionable insights from sales, customer, and product data to improve growth, retention, and operational efficiency.
 
+---
 
 ## 🔎 Key Areas of Insights & Recommendations
 
-Insights and recommendations are provided on the following key areas:
+This portfolio includes hands-on analytics in four key business areas:
 - **Customer Segmentation:** Who are our top segments? How do subscription types affect ordering patterns?
 - **Product Performance:** Which products/categories drive revenue? What are seasonal trends?
 - **Order Fulfillment & Operations:** Shipping delays, prescription completion rates, and refill behavior.
@@ -35,8 +45,9 @@ Insights and recommendations are provided on the following key areas:
 
 - The SQL queries used for initial cleaning and inspection are [here](link).
 - Targeted SQL queries for business questions are [here](link).
-- The interactive Tableau dashboard is [here](link).
+- The interactive Tableau dashboards are [here](link).
 
+---
 
 ## 🗄️ Data Structure & Initial Checks
 
@@ -49,8 +60,9 @@ Here’s a description of each table:
 
 ### Entity Relationship Diagram
 
-![Entity Relationship Diagram](erd.png)
+![Entity Relationship Diagram](ERD.png)
 
+---
 
 ## 📝 Executive Summary
 
@@ -62,6 +74,25 @@ Targeting high-value segments and optimizing fulfillment are critical opportunit
 
 [Dashboard snapshot or key trends visualization here]
 
+---
+
+## 📊 Dashboard Highlights
+
+This project delivers three core dashboards, each designed to support strategic decision-making for business leaders and teams:
+
+### 1. Customer Segmentation Dashboard
+- Visualizes ordering patterns, subscription types, and top customer segments.
+- Helps marketing and retention teams identify high-value groups and peak upgrade times.
+
+### 2. Product Performance Dashboard
+- Tracks sales by product and category, including seasonal fluctuations and the impact of prescription status.
+- Supports product managers in optimizing the catalog and promotional strategies.
+
+### 3. Operations & Satisfaction Dashboard
+- Monitors shipping delays, prescription verification bottlenecks, and customer satisfaction metrics.
+- Enables operations teams to address fulfillment issues and improve customer experience.
+
+---
 
 ## 🔬 Insights Deep Dive
 
@@ -100,10 +131,11 @@ Targeting high-value segments and optimizing fulfillment are critical opportunit
 
 [Satisfaction visualization]
 
+---
 
 ## 💡 Recommendations
 
-_Based on the findings, we recommend the **operations and marketing teams** to consider:_
+_Based on the findings, I recommend the **operations and marketing teams** consider:_
 
 - **Optimize shipping workflows,** focusing on high-delay regions (NY, FL, TX).
 - **Develop targeted upsell campaigns** for monthly subscribers approaching renewal.
@@ -111,6 +143,7 @@ _Based on the findings, we recommend the **operations and marketing teams** to c
 - **Improve prescription verification systems** to reduce delays and cancellations.
 - **Leverage high-satisfaction customer segments** for referral incentives and testimonials.
 
+---
 
 ## ⚠️ Assumptions and Caveats
 
@@ -118,3 +151,8 @@ _Based on the findings, we recommend the **operations and marketing teams** to c
 - **Assumption 2:** Doctor names for prescription orders may be unformatted and require SQL cleaning.
 - **Assumption 3:** Some fields (e.g., email, manufacturer) are synthetically generated and not real.
 - **Assumption 4:** Data for certain months may be sparser due to simulated business cycles.
+
+---
+
+**For HR and the team:**  
+This project is designed to demonstrate not just technical skills in Python, SQL, and Tableau, but also the ability to translate data into insights and business value. The dashboards provide actionable information for real-world decision-making and team collaboration.
