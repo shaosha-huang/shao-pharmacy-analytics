@@ -47,8 +47,7 @@ Here’s a description of each table:
 
 ### Entity Relationship Diagram
 
-![Entity Relationship Diagram](Entity Relationship Diagram.png)
-
+![Entity Relationship Diagram](erd.png)
 ---
 
 ## 📝 Executive Summary
