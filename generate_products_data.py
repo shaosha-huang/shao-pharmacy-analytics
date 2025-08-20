@@ -18,12 +18,14 @@ for i, prod in enumerate(product_list):
     product_id = f"P{1000+i}"
     name, category, price, rx, manufacturer, description = prod
     stock_quantity = random.randint(100, 10000)
+    # Cost is 50% to 80% of price
+    cost = round(price * random.uniform(0.5, 0.8), 2)
     product_rows.append([
-        product_id, name, category, price, rx, manufacturer, stock_quantity, description
+        product_id, name, category, price, cost, rx, manufacturer, stock_quantity, description
     ])
 
 df_products = pd.DataFrame(product_rows, columns=[
-    "product_id","product_name","product_category","price_usd","prescription_required",
+    "product_id","product_name","product_category","price_usd","cost_usd","prescription_required",
     "manufacturer","stock_quantity","description"
 ])
 df_products.to_csv("products.csv", index=False)
