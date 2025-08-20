@@ -9,7 +9,11 @@ This project demonstrates the entire analytics workflow: synthetic data creation
 Fork this repo, adapt it, and make it your own.  
 **Happy portfolio-ing! 🚀**
 
----
+
+## Project Overview
+
+Hi! I created this project to showcase my ability to work across the data pipeline: generating realistic sample data with Python, using SQL to extract and transform information, and building a dashboard to deliver actionable business insights. It's a hands-on demonstration of my skills in Python, SQL, and turning data into value for decision-making.
+
 
 ## 🏢 Project Background
 
@@ -20,7 +24,6 @@ Fork this repo, adapt it, and make it your own.
 
 As a data analyst at Shao's Pharmacy, your goal is to generate actionable insights from sales, customer, and product data to improve growth, retention, and operational efficiency.
 
----
 
 ## 🔎 Key Areas of Insights & Recommendations
 
@@ -34,7 +37,6 @@ Insights and recommendations are provided on the following key areas:
 - Targeted SQL queries for business questions are [here](link).
 - The interactive Tableau dashboard is [here](link).
 
----
 
 ## 🗄️ Data Structure & Initial Checks
 
@@ -48,7 +50,7 @@ Here’s a description of each table:
 ### Entity Relationship Diagram
 
 ![Entity Relationship Diagram](erd.png)
----
+
 
 ## 📝 Executive Summary
 
@@ -60,7 +62,6 @@ Targeting high-value segments and optimizing fulfillment are critical opportunit
 
 [Dashboard snapshot or key trends visualization here]
 
----
 
 ## 🔬 Insights Deep Dive
 
@@ -72,7 +73,6 @@ Targeting high-value segments and optimizing fulfillment are critical opportunit
 
 [Customer segmentation visualization]
 
----
 
 ### **Product Performance**
 - **Insight 1:** Minoxidil and Sertraline are top-selling items, with seasonal spikes in spring and fall.
@@ -82,7 +82,6 @@ Targeting high-value segments and optimizing fulfillment are critical opportunit
 
 [Product sales visualization]
 
----
 
 ### **Order Fulfillment & Operations**
 - **Insight 1:** Average shipping delay dropped from 12 days (2019) to 6 days (2024).
@@ -92,7 +91,6 @@ Targeting high-value segments and optimizing fulfillment are critical opportunit
 
 [Fulfillment visualization]
 
----
 
 ### **Customer Satisfaction**
 - **Insight 1:** 5-star ratings are highest among yearly subscribers.
@@ -102,7 +100,6 @@ Targeting high-value segments and optimizing fulfillment are critical opportunit
 
 [Satisfaction visualization]
 
----
 
 ## 💡 Recommendations
 
@@ -114,7 +111,6 @@ _Based on the findings, we recommend the **operations and marketing teams** to c
 - **Improve prescription verification systems** to reduce delays and cancellations.
 - **Leverage high-satisfaction customer segments** for referral incentives and testimonials.
 
----
 
 ## ⚠️ Assumptions and Caveats
 
@@ -122,5 +118,3 @@ _Based on the findings, we recommend the **operations and marketing teams** to c
 - **Assumption 2:** Doctor names for prescription orders may be unformatted and require SQL cleaning.
 - **Assumption 3:** Some fields (e.g., email, manufacturer) are synthetically generated and not real.
 - **Assumption 4:** Data for certain months may be sparser due to simulated business cycles.
-
----
