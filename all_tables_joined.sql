@@ -32,8 +32,15 @@ select distinct
     , p.prescription_required
     , p.manufacturer
     , p.stock_quantity
+    -- forecasts
+    , f.year_month
+    , f.forecasted_costs
+    , f.confidence_score
+    -- calcs
+    , f.trend_factor * o.order_total as forecasted_revenue
 from orders o
     left join products p on p.product_id = o.product_id
     left join customers c on c.customer_id = o.customer_id
+    left join forecasts f on f.year_month = o.year_month
 where o.order_date >= curdate() - interval 5 year
 order by o.order_date desc;
