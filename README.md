@@ -14,13 +14,14 @@ Fork this repo, adapt it, and make it your own.
 ## Project Overview
 
 Hi! I created this project to showcase my ability to work across the data pipeline: generating realistic sample data with Python, using SQL to extract and transform information, and building dashboards that deliver actionable business insights.  
-For this project, I focused on three dashboard perspectives that are especially valuable for a real-world team:
+For this project, I focused on four dashboard perspectives that are especially valuable for a real-world team:
 
 - **Customer Segmentation Dashboard:** Understand who your best customers are, their behaviors, and how segmentation impacts retention and growth.
 - **Product Performance Dashboard:** Track top-selling products, seasonal trends, and the impact of promotions or prescription requirements.
 - **Operations & Satisfaction Dashboard:** Monitor shipping delays, fulfillment bottlenecks, and customer feedback—enabling data-driven improvements in service.
+- **Revenue Forecast Dashboard:** Project future monthly revenue, visualize trends, and communicate forecast confidence to support planning and growth.
 
-Together, these dashboards demonstrate how technical skills can translate directly into business impact, supporting teams across marketing, product, and operations.
+Together, these dashboards demonstrate how technical skills can translate directly into business impact, supporting teams across marketing, product, operations, and finance.
 
 ---
 
@@ -29,19 +30,20 @@ Together, these dashboards demonstrate how technical skills can translate direct
 **Industry:** Telemedicine / Online Pharmacy  
 **Active Years:** 2019–2024 (5 years of data)  
 **Business Model:** Direct-to-consumer online prescription and over-the-counter medication sales, with monthly/yearly subscription options for recurring orders.  
-**Key Metrics:** Order volume, customer retention, product category sales, prescription fulfillment rates, shipping times, customer satisfaction.
+**Key Metrics:** Order volume, customer retention, product category sales, prescription fulfillment rates, shipping times, customer satisfaction, revenue forecasts.
 
-As a data analyst at Shao's Pharmacy, my goal is to generate actionable insights from sales, customer, and product data to improve growth, retention, and operational efficiency.
+As a data analyst at Shao's Pharmacy, my goal is to generate actionable insights from sales, customer, product, and forecast data to improve growth, retention, and operational efficiency.
 
 ---
 
 ## 🔎 Key Areas of Insights & Recommendations
 
-This portfolio includes hands-on analytics in four key business areas:
+This portfolio includes hands-on analytics in five key business areas:
 - **Customer Segmentation:** Who are our top segments? How do subscription types affect ordering patterns?
 - **Product Performance:** Which products/categories drive revenue? What are seasonal trends?
 - **Order Fulfillment & Operations:** Shipping delays, prescription completion rates, and refill behavior.
 - **Customer Satisfaction:** Ratings, feedback, and their relationship to repeat business.
+- **Revenue Forecasts:** Projected monthly revenues, trends over time, and confidence levels for planning.
 
 - The SQL queries used for initial cleaning and inspection are [here](link).
 - Targeted SQL queries for business questions are [here](link).
@@ -51,12 +53,13 @@ This portfolio includes hands-on analytics in four key business areas:
 
 ## 🗄️ Data Structure & Initial Checks
 
-Shao's Pharmacy's database consists of **three main tables** with a total of **X** records.  
+Shao's Pharmacy's database consists of **four main tables** with a total of **X** records.  
 Here’s a description of each table:
 
 - **customers:** Demographic and subscription info for each customer.
 - **products:** Product catalog, pricing, and prescription status.
-- **orders:** Transactional table linking customers and products, with order details and fulfillment info.
+- **orders:** Transactional table linking customers and products, with order details, fulfillment info, and a `year_month` field for monthly aggregation.
+- **forecast:** Monthly revenue forecasts, including actuals, projections, margin, trend factor, and confidence score.
 
 ### Entity Relationship Diagram
 
@@ -70,7 +73,8 @@ Here’s a description of each table:
 
 Over five years, Shao's Pharmacy grew steadily, with monthly subscriptions increasing customer retention.  
 Hair and mental health products accounted for the majority of sales, while shipping delays and prescription issues were key drivers of lower ratings.  
-Targeting high-value segments and optimizing fulfillment are critical opportunities.
+Revenue forecasting models show consistent growth, with trend factors indicating stronger performance in spring and fall.  
+Targeting high-value segments, optimizing fulfillment, and leveraging forecast insights are critical opportunities.
 
 [Dashboard snapshot or key trends visualization here]
 
@@ -78,7 +82,7 @@ Targeting high-value segments and optimizing fulfillment are critical opportunit
 
 ## 📊 Dashboard Highlights
 
-This project delivers three core dashboards, each designed to support strategic decision-making for business leaders and teams:
+This project delivers four core dashboards, each designed to support strategic decision-making for business leaders and teams:
 
 ### 1. Customer Segmentation Dashboard
 - Visualizes ordering patterns, subscription types, and top customer segments.
@@ -91,6 +95,10 @@ This project delivers three core dashboards, each designed to support strategic 
 ### 3. Operations & Satisfaction Dashboard
 - Monitors shipping delays, prescription verification bottlenecks, and customer satisfaction metrics.
 - Enables operations teams to address fulfillment issues and improve customer experience.
+
+### 4. Revenue Forecast Dashboard
+- Projects monthly revenue using historical order data, trend factors, and confidence scores.
+- Visualizes forecasted growth, highlights periods of higher uncertainty, and supports planning for sales, staffing, and inventory.
 
 ---
 
@@ -122,6 +130,13 @@ This project delivers three core dashboards, each designed to support strategic 
 
 [Fulfillment visualization]
 
+### **Revenue Forecasts**
+- **Insight 1:** Forecasted revenue shows year-over-year growth, with trend factor indicating periods of accelerated demand.
+- **Insight 2:** Confidence scores are highest in months with stable product launches and predictable customer behavior.
+- **Insight 3:** Forecasted margin helps identify months with higher profitability and informs inventory planning.
+- **Insight 4:** Outlier periods (e.g., new product launches) can be flagged for cautious business decisions using confidence score.
+
+[Revenue forecast visualization]
 
 ### **Customer Satisfaction**
 - **Insight 1:** 5-star ratings are highest among yearly subscribers.
@@ -135,13 +150,14 @@ This project delivers three core dashboards, each designed to support strategic 
 
 ## 💡 Recommendations
 
-_Based on the findings, I recommend the **operations and marketing teams** consider:_
+_Based on the findings, I recommend the **operations, marketing, and finance teams** consider:_
 
 - **Optimize shipping workflows,** focusing on high-delay regions (NY, FL, TX).
 - **Develop targeted upsell campaigns** for monthly subscribers approaching renewal.
 - **Partner with top manufacturers** to secure more product discounts.
 - **Improve prescription verification systems** to reduce delays and cancellations.
 - **Leverage high-satisfaction customer segments** for referral incentives and testimonials.
+- **Use revenue forecast trends and confidence scores** to guide inventory purchases, staffing decisions, and budgeting.
 
 ---
 
@@ -151,6 +167,7 @@ _Based on the findings, I recommend the **operations and marketing teams** consi
 - **Assumption 2:** Doctor names for prescription orders may be unformatted and require SQL cleaning.
 - **Assumption 3:** Some fields (e.g., email, manufacturer) are synthetically generated and not real.
 - **Assumption 4:** Data for certain months may be sparser due to simulated business cycles.
+- **Assumption 5:** Revenue forecasts are based on historical order data, monthly trend factors, and may have variable confidence scores.
 
 ---
 

@@ -25,6 +25,7 @@ order_statuses = [
 
 for n in range((end_date - start_date).days + 1):
     day = start_date + timedelta(days=n)
+    year_month = day.strftime("%Y-%m")
     for i in range(random.randint(1,4)):
         customer = df_customers.sample(1).iloc[0]
         product = df_products.sample(1).iloc[0]
@@ -55,6 +56,7 @@ for n in range((end_date - start_date).days + 1):
             order_id,
             customer["customer_id"],
             day.strftime("%Y-%m-%d"),
+            year_month,
             product["product_id"],
             qty,
             shipping_delay,
@@ -80,7 +82,7 @@ for n in range((end_date - start_date).days + 1):
         order_id += 1
 
 df_orders = pd.DataFrame(order_rows, columns=[
-    "order_id","customer_id","order_date","product_id","quantity","shipping_delay_days",
+    "order_id","customer_id","order_date","year_month","product_id","quantity","shipping_delay_days",
     "customer_rating","shipping_date","delivered_date","refill","prescribing_doctor","order_status","payment_method","order_total"
 ])
 df_orders.to_csv("orders.csv", index=False)
