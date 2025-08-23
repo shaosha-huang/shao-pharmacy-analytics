@@ -77,7 +77,7 @@ for n in range((end_date - start_date).days + 1):
 
         payment_method = random.choice(["Credit Card", "Paypal", "Apple Pay", "Google Pay"])
         price_usd = product["Price Usd"]
-        tax_rate = random.uniform(0.04, 0.11)
+        tax_rate = random.uniform(0.04, 0.11)  # 5% to 8.5%
         order_total = round(qty * price_usd * (1 + tax_rate), 2)
 
         ship_hour = random.randint(8, 18)

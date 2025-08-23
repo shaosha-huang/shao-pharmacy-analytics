@@ -17,14 +17,19 @@ select distinct
     , o.payment_method
     , o.order_total
     -- customers
+    , c.subs_change_id
     , c.name as customer_name
+    , c.email
+    , c.birth_date
     , timestampdiff(year, c.birth_date, curdate()) as age
     , c.gender
     , c.state
-    , c.registration_date
     , c.subscription_type
     , c.subscription_status
+    , c.subs_change_date
+    , c.auto_renewal
     -- products
+    , p.product_id
     , p.product_name
     , p.product_category
     , p.price_usd
@@ -32,15 +37,25 @@ select distinct
     , p.prescription_required
     , p.manufacturer
     , p.stock_quantity
+    , p.description
     -- forecasts
+    , f.forecast_id
     , f.year_month
-    , f.forecasted_costs
+    , f.product_id as forecast_product_id
+    , f.product_name as forecast_product_name
+    , f.actual_revenue
+    , f.actual_cost
+    , f.actual_margin
+    , f.forecasted_revenue
+    , f.forecasted_cost
+    , f.forecasted_margin
     , f.confidence_score
-    -- calcs
-    , f.trend_factor * o.order_total as forecasted_revenue
+    , f.forecast_date
+    , f.trend_factor
 from orders o
     left join products p on p.product_id = o.product_id
     left join customers c on c.customer_id = o.customer_id
     left join forecasts f on f.year_month = o.year_month
+        and f.product_id = p.product_id
 where o.order_date >= curdate() - interval 5 year
-order by o.order_date desc;
+order by o.order_date desc
