@@ -18,9 +18,9 @@ df_orders.columns = [make_nice(col) for col in df_orders.columns]
 df_orders['Order Date'] = pd.to_datetime(df_orders['Order Date'])
 df_orders['Year Month'] = df_orders['Order Date'].dt.to_period('M').astype(str)
 
-# Merge orders with products to get cost and price and product name (no new columns except Product Id/Product Name)
+# Merge orders with products to get cost and price (no Product Name now)
 df_orders = df_orders.merge(
-    df_products[['Product Id', 'Product Name', 'Price Usd', 'Cost Usd']],
+    df_products[['Product Id', 'Price Usd', 'Cost Usd']],
     on='Product Id',
     how='left'
 )
@@ -29,7 +29,7 @@ df_orders = df_orders.merge(
 df_orders['Actual Cost'] = df_orders['Quantity'] * df_orders['Cost Usd']
 
 # Group orders by Year Month and Product
-monthly_product_orders = df_orders.groupby(['Year Month', 'Product Id', 'Product Name']).agg({
+monthly_product_orders = df_orders.groupby(['Year Month', 'Product Id']).agg({
     'Order Total': 'sum',
     'Actual Cost': 'sum'
 }).reset_index()
@@ -39,7 +39,6 @@ forecast_rows = []
 for i, row in monthly_product_orders.iterrows():
     year_month = row['Year Month']
     product_id = row['Product Id']
-    product_name = row['Product Name']
     actual_revenue = round(row['Order Total'], 2)
     actual_cost = round(row['Actual Cost'], 2)
     actual_margin = round(actual_revenue - actual_cost, 2)
@@ -60,7 +59,7 @@ for i, row in monthly_product_orders.iterrows():
     forecast_date = datetime.now().strftime("%Y-%m-%d")
 
     forecast_rows.append([
-        f"FM{i+1:06d}", year_month, product_id, product_name,
+        f"FM{i+1:06d}", year_month, product_id,
         actual_revenue, actual_cost, actual_margin,
         forecasted_revenue, forecasted_cost, forecasted_margin,
         confidence_score, forecast_date, trend_factor
@@ -72,7 +71,7 @@ def format_col(col):
     return " ".join([w.capitalize() for w in col.split()])
 
 df_monthly_product_forecast = pd.DataFrame(forecast_rows, columns=[
-    "Forecast Id", "Year Month", "Product Id", "Product Name",
+    "Forecast Id", "Year Month", "Product Id",
     "Actual Revenue", "Actual Cost", "Actual Margin",
     "Forecasted Revenue", "Forecasted Cost", "Forecasted Margin",
     "Confidence Score", "Forecast Date", "Trend Factor"

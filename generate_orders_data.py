@@ -49,7 +49,8 @@ for n in range((end_date - start_date).days + 1):
     )
     eligible_daily_customers = daily_status[daily_status["Subscription Status"].isin(["Active", "Paused", "Pending"])]
 
-    num_orders = random.randint(6, 24)
+    # DOUBLE the order count
+    num_orders = random.randint(12, 48)
     for i in range(num_orders):
         product = df_products.sample(1).iloc[0]
         qty = random.randint(1, 3)
@@ -77,7 +78,7 @@ for n in range((end_date - start_date).days + 1):
 
         payment_method = random.choice(["Credit Card", "Paypal", "Apple Pay", "Google Pay"])
         price_usd = product["Price Usd"]
-        tax_rate = random.uniform(0.04, 0.11)  # 5% to 8.5%
+        tax_rate = random.uniform(0.04, 0.11)
         order_total = round(qty * price_usd * (1 + tax_rate), 2)
 
         ship_hour = random.randint(8, 18)

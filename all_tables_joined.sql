@@ -42,7 +42,6 @@ select distinct
     , f.forecast_id
     , f.year_month
     , f.product_id as forecast_product_id
-    , f.product_name as forecast_product_name
     , f.actual_revenue
     , f.actual_cost
     , f.actual_margin

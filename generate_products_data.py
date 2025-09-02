@@ -8,7 +8,7 @@ product_list = [
     ("Sertraline", "Mental Health", 44.99, True, "MindCare Pharmaceuticals", "Prescription antidepressant used to treat depression and anxiety disorders."),
     ("Tretinoin", "Skincare", 29.99, True, "SkinRenew Co", "Topical retinoid for acne treatment and skin renewal."),
     ("Ashwagandha", "Mental Health", 19.99, False, "Herbal Remedies", "Herbal supplement to support stress relief and mental clarity."),
-    ("Vitamin D", "Health", 10.99, False, "Sunshine Pharma", "Essential vitamin for bone health and immune support."),
+    # ("Vitamin D", "Health", 10.99, False, "Sunshine Pharma", "Essential vitamin for bone health and immune support."),  # REMOVED
     ("Hydroxyzine", "Allergy", 22.99, True, "AllerGuard", "Prescription antihistamine for allergy relief and itching."),
     ("Ibuprofen", "Pain Relief", 8.99, False, "ReliefRx", "Non-prescription pain reliever for headaches, muscle aches, and fevers."),
 ]

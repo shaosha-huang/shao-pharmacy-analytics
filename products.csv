@@ -1,10 +1,9 @@
 product_id,product_name,product_category,price_usd,cost_usd,prescription_required,manufacturer,stock_quantity,description
-P1000,Minoxidil,Hair,25.99,20.04,True,HairGrow Labs,8187,Topical solution to treat hair loss and promote hair regrowth.
-P1001,Finasteride,Hair,39.99,29.89,True,HairGrow Labs,6309,Oral medication for male pattern baldness; helps prevent hair loss.
-P1002,Melatonin,Sleep,12.99,6.93,False,SleepWell Inc,508,Supplement to support healthy sleep cycles and combat insomnia.
-P1003,Sertraline,Mental Health,44.99,30.68,True,MindCare Pharmaceuticals,7053,Prescription antidepressant used to treat depression and anxiety disorders.
-P1004,Tretinoin,Skincare,29.99,21.8,True,SkinRenew Co,6787,Topical retinoid for acne treatment and skin renewal.
-P1005,Ashwagandha,Mental Health,19.99,13.06,False,Herbal Remedies,652,Herbal supplement to support stress relief and mental clarity.
-P1006,Vitamin D,Health,10.99,7.46,False,Sunshine Pharma,6556,Essential vitamin for bone health and immune support.
-P1007,Hydroxyzine,Allergy,22.99,18.17,True,AllerGuard,3342,Prescription antihistamine for allergy relief and itching.
-P1008,Ibuprofen,Pain Relief,8.99,6.79,False,ReliefRx,902,"Non-prescription pain reliever for headaches, muscle aches, and fevers."
+P1000,Minoxidil,Hair,25.99,13.02,True,HairGrow Labs,3245,Topical solution to treat hair loss and promote hair regrowth.
+P1001,Finasteride,Hair,39.99,22.03,True,HairGrow Labs,3673,Oral medication for male pattern baldness; helps prevent hair loss.
+P1002,Melatonin,Sleep,12.99,7.02,False,SleepWell Inc,7140,Supplement to support healthy sleep cycles and combat insomnia.
+P1003,Sertraline,Mental Health,44.99,33.14,True,MindCare Pharmaceuticals,7742,Prescription antidepressant used to treat depression and anxiety disorders.
+P1004,Tretinoin,Skincare,29.99,21.2,True,SkinRenew Co,6131,Topical retinoid for acne treatment and skin renewal.
+P1005,Ashwagandha,Mental Health,19.99,15.65,False,Herbal Remedies,1927,Herbal supplement to support stress relief and mental clarity.
+P1006,Hydroxyzine,Allergy,22.99,14.19,True,AllerGuard,6671,Prescription antihistamine for allergy relief and itching.
+P1007,Ibuprofen,Pain Relief,8.99,5.1,False,ReliefRx,1357,"Non-prescription pain reliever for headaches, muscle aches, and fevers."
