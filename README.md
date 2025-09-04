@@ -32,17 +32,6 @@ The focus: **three core dashboards** answering key business questions in a clear
 
 ---
 
-## 🔎 Insights & Recommendations
-
-- **Business & Financial Performance:**  
-  Trends in revenue, costs, profit, margin, forecasts, top products/categories, order statuses, active customers.
-- **Customer Insights & Retention:**  
-  Segmentation, churn/retention, repeat/refill rates, subscription lifecycle, journey, location analysis.
-- **Product Supply:**  
-  Inventory health, supplier delivery, fulfillment rates, regional supply chain status, stockout alerts.
-
----
-
 ## 🗄️ Data Structure
 
 Four main tables power the analysis:
@@ -105,7 +94,7 @@ Each section shows:
 - Top products/categories, order status, inventory alerts
 - Customer trends and segmentation
 
-**Live Tableau Financial Scorecard Dashboard:**  
+**Live Tableau Business & Financial Performance Dashboard:**  
 [View the interactive scorecard on Tableau Public](https://public.tableau.com/views/ShaosPharmacy-OnlineOrdersPerformanceScorecard/Scorecard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 Or see below:
