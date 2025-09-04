@@ -88,12 +88,6 @@ Each section shows:
 
 ---
 
-**Business & Financial Performance Dashboard**
-- Revenue, cost, margin, growth/seasonality
-- Forecasts (actual vs projected, confidence, trend)
-- Top products/categories, order status, inventory alerts
-- Customer trends and segmentation
-
 **Live Tableau Business & Financial Performance Dashboard:**  
 [View the interactive scorecard on Tableau Public](https://public.tableau.com/views/ShaosPharmacy-OnlineOrdersPerformanceScorecard/Scorecard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
