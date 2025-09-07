@@ -37,7 +37,7 @@ Four main tables power the analysis:
 
 ![Entity Relationship Diagram](Diagram_ERD.png)
 
-## 📊 Online Orders Performance Scorecard: Analysis & Value
+## 📈 Online Orders Performance Scorecard: Analysis & Value
 
 ### Dashboard Overview
 
