@@ -93,7 +93,7 @@ This dashboard provides actionable segmentation of customers by value and risk, 
 
 **Analysis in Tableau:**  
 - RFM (Recency, Frequency, Monetary) scoring to identify high-value and at-risk customers
-- Churn prediction and retention tracking by product, region, or segment
+- Churn prediction and retention tracking by product, region, demographics, or segment
 - Subscription lifecycle analytics and usage trends
 - Exportable customer lists for targeted outreach
 
@@ -207,4 +207,4 @@ Here's what's in the repo and what each file is for:
 
 ---
 
-**This project demonstrates end-to-end technical and business analytics skills—turning data into actionable insights and real-world value.**
+**This project demonstrates Shao's end-to-end technical and business analytics skills, turning data into actionable insights and real-world value.**
