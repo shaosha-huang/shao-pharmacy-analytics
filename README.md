@@ -40,11 +40,11 @@ Four main tables power the analysis:
 - **orders:** Transactions and fulfillment details
 - **forecast:** Monthly revenue forecasts, actuals, projections, margin, trend factor, confidence score
 
-![Entity Relationship Diagram](ERD.png)
+![Entity Relationship Diagram](Diagram_ERD.png)
 
 ---
 
-## 📊 Business & Financial Performance Dashboard: Analysis & Value
+## 📊 Online Orders Performance Scorecard: Analysis & Value
 
 ### Dashboard Overview
 
@@ -88,12 +88,12 @@ Each section shows:
 
 ---
 
-**Live Tableau Business & Financial Performance Dashboard:**  
+**Live Tableau Online Orders Performance Scorecard Dashboard:**  
 [View the interactive scorecard on Tableau Public](https://public.tableau.com/views/ShaosPharmacy-OnlineOrdersPerformanceScorecard/Scorecard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 Or see below:
 
-![Shao’s Pharmacy – Online Orders Performance Scorecard | YTD 2025](Shao’s%20Pharmacy%20–%20Online%20Orders%20Performance%20Scorecard%20%7C%20YTD%202025.png)
+![Dashboard_Shao’s Pharmacy_Online Orders Performance Scorecard](Dashboard_Shao’s%20Pharmacy_Online%20Orders%20Performance%20Scorecard.png)
 
 ---
 
