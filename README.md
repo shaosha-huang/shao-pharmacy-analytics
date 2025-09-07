@@ -1,15 +1,15 @@
 # 🧪💊 Shao's Pharmacy: Data Analytics Project
 
-Welcome to Shao's Pharmacy, a portfolio project demonstrating the full analytics workflow, from synthetic data creation and SQL analysis to actionable Tableau dashboards.
+Welcome to Shao's Pharmacy, a portfolio project demonstrating the full analytics workflow, from synthetic data creation and data pulling with SQL to actionable Tableau dashboards.
 
 ## 🚀 Project Overview
 
-This project showcases my ability to generate realistic sample data (Python), extract insights (SQL), and build dashboards (Tableau) that drive business value.
+This project showcases my ability to generate realistic sample data (Python), extract data (SQL), and build dashboards (Tableau) that drive business value.
 
 The core focus is on **three key dashboards** that answer important business questions in a clear, actionable format:
 
 - **📈 Online Orders Performance Scorecard Dashboard:**  
-  Unified view of sales, revenue, costs, forecasts, product performance, and customer trends.  
+  Unified view of sales, revenue, costs, forecasts, product performance, and trends.  
   *(This dashboard has been fully built out and included in the repository.)*
 
 The 2 dashboards below are not yet fully implemented, but I provide example Tableau calculations, analysis strategies, and possible business use cases as guidance for future build-out.  
@@ -90,6 +90,7 @@ Or see below:
 ### Dashboard Overview & Analysis Value
 
 This dashboard provides actionable segmentation of customers by value and risk, enabling managers to boost retention, target win-back campaigns, and optimize subscription strategies.  
+
 **Analysis in Tableau:**  
 - RFM (Recency, Frequency, Monetary) scoring to identify high-value and at-risk customers
 - Churn prediction and retention tracking by product, region, or segment
@@ -100,8 +101,6 @@ This dashboard provides actionable segmentation of customers by value and risk, 
 - Quickly identify top customers for loyalty campaigns and upsell opportunities
 - Detect at-risk segments and proactively address churn
 - Track trends in customer satisfaction, purchases, and subscriptions
-
-Segmentation is available by product, category, and region—enabling managers to set goals, track trends, and export customer lists for targeted retention or win-back campaigns.
 
 ### Segmentation Criteria
 
@@ -137,6 +136,7 @@ IF SUM([Recent 6 Months Spend]) < SUM([Previous 6 Months Spend]) * 0.7 THEN 'Sig
 ### Dashboard Overview & Analysis Value
 
 This dashboard enables managers to monitor supply chain health and proactively manage risks and inventory, with segmentation by product, category, supplier, and region.  
+
 **Analysis in Tableau:**  
 - Inventory alerts and trend analysis by product/category
 - Supplier performance evaluation (on-time rate, delays, cancellations)
@@ -147,8 +147,6 @@ This dashboard enables managers to monitor supply chain health and proactively m
 - Minimize stockouts and lost sales by monitoring inventory and fulfillment KPIs
 - Improve supplier selection and contract management
 - Enable teams to focus restocking efforts where needed most
-
-Segmentation by product, category, supplier, and region allows managers to monitor, target, and export supply lists for procurement and restocking.
 
 ### Segmentation Criteria
 
