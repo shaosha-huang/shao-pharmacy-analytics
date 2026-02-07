@@ -1,9 +1,10 @@
 product_id,product_name,product_category,price_usd,cost_usd,prescription_required,manufacturer,stock_quantity,description
-P1000,Minoxidil,Hair,25.99,13.02,True,HairGrow Labs,3245,Topical solution to treat hair loss and promote hair regrowth.
-P1001,Finasteride,Hair,39.99,22.03,True,HairGrow Labs,3673,Oral medication for male pattern baldness; helps prevent hair loss.
-P1002,Melatonin,Sleep,12.99,7.02,False,SleepWell Inc,7140,Supplement to support healthy sleep cycles and combat insomnia.
-P1003,Sertraline,Mental Health,44.99,33.14,True,MindCare Pharmaceuticals,7742,Prescription antidepressant used to treat depression and anxiety disorders.
-P1004,Tretinoin,Skincare,29.99,21.2,True,SkinRenew Co,6131,Topical retinoid for acne treatment and skin renewal.
-P1005,Ashwagandha,Mental Health,19.99,15.65,False,Herbal Remedies,1927,Herbal supplement to support stress relief and mental clarity.
-P1006,Hydroxyzine,Allergy,22.99,14.19,True,AllerGuard,6671,Prescription antihistamine for allergy relief and itching.
-P1007,Ibuprofen,Pain Relief,8.99,5.1,False,ReliefRx,1357,"Non-prescription pain reliever for headaches, muscle aches, and fevers."
+P1000,Minoxidil,Hair,25.99,20.58,True,HairGrow Labs,5666,Topical solution to treat hair loss and promote hair regrowth.
+P1001,Finasteride,Hair,39.99,24.4,True,HairGrow Labs,6636,Oral medication for male pattern baldness; helps prevent hair loss.
+P1002,Melatonin,Sleep,12.99,9.93,False,SleepWell Inc,8365,Supplement to support healthy sleep cycles and combat insomnia.
+P1003,Sertraline,Mental Health,44.99,33.38,True,MindCare Pharmaceuticals,7740,Prescription antidepressant used to treat depression and anxiety disorders.
+P1004,Tretinoin,Skincare,29.99,20.75,True,SkinRenew Co,8338,Topical retinoid for acne treatment and skin renewal.
+P1005,Ashwagandha,Mental Health,19.99,10.57,False,Herbal Remedies,9733,Herbal supplement to support stress relief and mental clarity.
+P1006,Hydroxyzine,Allergy,22.99,18.35,True,AllerGuard,9870,Prescription antihistamine for allergy relief and itching.
+P1007,Ibuprofen,Pain Relief,8.99,6.53,False,ReliefRx,9713,"Non-prescription pain reliever for headaches, muscle aches, and fevers."
+P1008,Smooth Chicken Congee,Nutrition,14.99,9.45,False,Golden Lotus Foods,1766,Nutritious chicken congee for gentle nourishment and digestive comfort.
