@@ -11,7 +11,6 @@ product_list = [
     # ("Vitamin D", "Health", 10.99, False, "Sunshine Pharma", "Essential vitamin for bone health and immune support."),  # REMOVED
     ("Hydroxyzine", "Allergy", 22.99, True, "AllerGuard", "Prescription antihistamine for allergy relief and itching."),
     ("Ibuprofen", "Pain Relief", 8.99, False, "ReliefRx", "Non-prescription pain reliever for headaches, muscle aches, and fevers."),
-    ("Smooth Chicken Congee", "Nutrition", 14.99, False, "Golden Lotus Foods", "Nutritious chicken congee for gentle nourishment and digestive comfort."),
 ]
 
 product_rows = []
